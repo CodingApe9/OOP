@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Test
+namespace Test.otherSrc
 {
     internal class StarDiamond
     {

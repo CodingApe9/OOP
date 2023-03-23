@@ -4,16 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Test
+namespace Test.Stack
 {
-    internal class StackTest<T>
+    internal class LinkedListStack<T>
     {
         LinkedList<T> stack = new LinkedList<T>();
         public void push(T x)
         {
             stack.AddLast(x);
         }
-        
+
         public T top()
         {
             return stack.Last.Value;

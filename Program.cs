@@ -1,10 +1,10 @@
-﻿using Test;
+﻿using Test.Stack;
 
 //StarDiamond main = new StarDiamond();
 
 //main.run();
 
-StackTest<int> intStack = new StackTest<int>();
+LinkedListStack<int> intStack = new LinkedListStack<int>();
 intStack.push(10);
 intStack.push(20);
 intStack.push(30);
@@ -15,7 +15,7 @@ Console.WriteLine(intStack.top());
 Console.WriteLine(intStack.size());
 
 
-StackTest<string> stringStack = new StackTest<string>();
+LinkedListStack<string> stringStack = new LinkedListStack<string>();
 stringStack.push("aaa");
 stringStack.push("bb");
 stringStack.push("ccc");
