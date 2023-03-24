@@ -16,7 +16,7 @@ namespace Test.Stack
 
         public T top()
         {
-            return stack.Last.Value;
+            return stack.Last?.Value;
         }
 
         public T pop()
