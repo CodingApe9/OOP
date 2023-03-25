@@ -39,7 +39,8 @@ Console.WriteLine("-----------------------------------------------------");
 //int Array Stack Test
 Console.WriteLine("-----------------------------------------------------");
 Console.WriteLine("#int Array Stack Test Start");
-ArrayStack<int> intArrayStack = new ArrayStack<int>(10);
+int size = 10;
+ArrayStack<int> intArrayStack = new ArrayStack<int>(size);
 intArrayStack.Push(10);
 intArrayStack.Push(20);
 Console.WriteLine(intArrayStack.Pop());
@@ -47,6 +48,11 @@ Console.WriteLine(intArrayStack.Peek());
 intArrayStack.Push(444);
 Console.WriteLine(intArrayStack.Peek());
 intArrayStack.Clear();
+Console.WriteLine(intArrayStack.Pop());
+for (int i = 0; i <= size; i++)
+{
+    intArrayStack.Push(i);
+}
 Console.WriteLine(intArrayStack.Pop());
 Console.WriteLine("#int Array Stack Test End");
 Console.WriteLine("-----------------------------------------------------");

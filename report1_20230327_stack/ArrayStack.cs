@@ -14,25 +14,25 @@
         {
             if (top+1 == maxSize)
             {
-                Console.WriteLine("full Stack");
+                Console.WriteLine("#Error full Stack");
                 return;
             }
             array[++top] = value;
         }
-        public T Pop()
+        public T? Pop()
         {
             if (top == -1)
             {
-                Console.WriteLine("Empty Stack");
+                Console.WriteLine("#Error Empty Stack");
                 return default(T);
             }
             return array[top--];
         }
-        public T Peek()
+        public T? Peek()
         {
             if (top == -1)
             {
-                Console.WriteLine("Empty Stack");
+                Console.WriteLine("#Error Empty Stack");
                 return default(T);
             }
             return array[top];

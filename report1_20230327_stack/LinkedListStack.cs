@@ -39,21 +39,23 @@
             top = newNode;
             size++;
         }
-        public T Pop() 
+        public T? Pop() 
         {
-            if (top == null)
-            {
-                return default(T);
-            }
-            Node<T> tmp = top;
+            Node<T>? tmp = top;
             top = top.GetNext();
             size--;
+            if (tmp == null)
+            {
+                Console.WriteLine("#Error Empty Stack");
+                return default(T);
+            }
             return tmp.GetValue();
         }
-        public T Peek() 
+        public T? Peek() 
         {
             if (top == null)
             {
+                Console.WriteLine("#Error Empty Stack");
                 return default(T);
             }
             return top.GetValue();
