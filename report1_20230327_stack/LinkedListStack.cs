@@ -4,31 +4,74 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Test.Stack
+namespace LinkedList.Stack
 {
+    internal class Node<T>
+    {
+        T value;
+        Node<T>? next;
+        public  Node(T value)
+        {
+            this.value = value;
+        }
+        public T GetValue()
+        {
+            return value;
+        }
+        public Node<T> GetNext()
+        {
+            return next;
+        }
+
+        public void SetNext(Node<T> newNode)
+        {
+            next = newNode;
+        }
+    }
     internal class LinkedListStack<T>
     {
-        LinkedList<T> stack = new LinkedList<T>();
-        public void push(T x)
+        Node<T>? top;
+        int size;
+        public LinkedListStack()
         {
-            stack.AddLast(x);
+            top = null;
+            size = 0;
         }
 
-        public T top()
+        public void Push(T value) 
         {
-            return stack.Last?.Value;
+            Node<T> newNode = new Node<T>(value);
+            newNode.SetNext(top);
+            top = newNode;
+            size++;
         }
-
-        public T pop()
+        public T Pop() 
         {
-            T tmp = stack.Last.Value;
-            stack.RemoveLast();
-            return tmp;
+            if (top == null)
+            {
+                return default(T);
+            }
+            Node<T> tmp = top;
+            top = top.GetNext();
+            size--;
+            return tmp.GetValue();
         }
-
-        public int size()
+        public T Peek() 
         {
-            return stack.Count;
+            if (top == null)
+            {
+                return default(T);
+            }
+            return top.GetValue();
+        }
+        public int Size()
+        {
+            return size;
+        }
+        public void Clear()
+        {
+            top = null;
+            size = 0;
         }
     }
 }
