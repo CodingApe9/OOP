@@ -42,13 +42,13 @@
         public T? Pop() 
         {
             Node<T>? tmp = top;
-            top = top.GetNext();
-            size--;
+            top = top?.GetNext();
             if (tmp == null)
             {
                 Console.WriteLine("#Error Empty Stack");
                 return default(T);
             }
+            size--;
             return tmp.GetValue();
         }
         public T? Peek() 

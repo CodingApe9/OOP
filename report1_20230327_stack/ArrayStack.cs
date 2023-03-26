@@ -41,7 +41,7 @@
         {
             if (top == -1)
             {
-                Console.WriteLine("Empty Stack");
+                Console.WriteLine("#Error Empty Stack");
             }
             return top;
         }

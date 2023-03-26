@@ -14,8 +14,9 @@ intLinkedListStack.Push(40);
 Console.WriteLine(intLinkedListStack.Pop());
 Console.WriteLine(intLinkedListStack.Peek());
 intLinkedListStack.Clear();
+Console.WriteLine(intLinkedListStack.Pop());
+Console.WriteLine("size: "+intLinkedListStack.Size());
 Console.WriteLine(intLinkedListStack.Peek());
-Console.WriteLine(intLinkedListStack.Size());
 Console.WriteLine("#int LinkedList Stack Test End");
 Console.WriteLine("-----------------------------------------------------");
 
