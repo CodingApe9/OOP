@@ -5,7 +5,7 @@
  
     Program.cs: 테스트 코드
   
-    report1_20230327_stack
+    report1_20230327_stack/
     
       ArrayStack.cs: 배열 스택 클래스
       
