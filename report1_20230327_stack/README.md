@@ -15,8 +15,8 @@
       
       각각 배열 스택, 링크드 리스트 스택 클래스 파일
       
-      
-![image](https://user-images.githubusercontent.com/117576404/227758181-1911934a-b6a5-4f75-99e6-12f85b05e094.png)
+ ![image](https://user-images.githubusercontent.com/117576404/230019621-74c5f09f-1548-4ac2-896e-ca7d03146125.png)
+
 
 테스트 코드 설명: 두 스택 클래스에 Push, Pop 정상 동작 test, 빈 상태의 스택일때 Pop, Peek 동작시 에러(Null Pointer Exception) 테스트
 
